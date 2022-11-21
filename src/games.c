@@ -31,7 +31,7 @@
 #include	"games.h"
 #include	"print.h"
 
-extern int	errno;
+#include <errno.h>
 
 #define MAX_GAMES 50
 

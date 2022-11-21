@@ -140,7 +140,11 @@ sendcmd(s, cmd, arg)
 	int		cc;
 	unsigned int	len;
 
-	(void)sprintf(buf, "%s %s\n", fnlist[cmd].name, arg != 0 ? arg : "");
+	if (arg != 0 && strchr(arg, ' ') != 0) {
+		(void)sprintf(buf, "%s \"%s\"\n", fnlist[cmd].name, arg);
+	} else {
+		(void)sprintf(buf, "%s %s\n", fnlist[cmd].name, arg != 0 ? arg : "");
+	}
 	len = strlen(buf);
 	cc = write(s, buf, len);
 	if (cc < 0) {

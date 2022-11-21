@@ -176,6 +176,7 @@ next_online(cmd, where, len, prompt, erm)
 		cp = cmd;
 		if ('"' == *cp) {
 			cp++;
+			cmd++;
 			while (*cmd && '"' != *cmd)
 				cmd++;
 			if ('"' != *cmd) {

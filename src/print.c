@@ -39,7 +39,7 @@ int		disable_bell_output = 0;
 /* #define FUNNY_HIGH if highlighting doesn't work on your terminal */
 /* #define FUNNY_HIGH */
 
-static int	curout_isapipe;
+int	curout_isapipe;
 static int	terminited = 0;
 static char	*Terminal_SO, *Terminal_SE;
 
