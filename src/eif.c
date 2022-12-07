@@ -128,7 +128,7 @@ commandloop()
 		if (-1 == game_socket) {
 			strcpy(prompt, "Local% ");
 		} else
-			snprintf(prompt, BUFSIZ, "\n\r%s %s%s%s[%d,%d]%% ",
+			snprintf(prompt, BUFSIZ, "\n%s %s%s%s[%d,%d]%% ",
 				game_name,
 				(inform_buffer[0]) ? "(" : "",
 				(inform_buffer[0]) ? inform_buffer : "",
