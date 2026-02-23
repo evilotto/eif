@@ -261,7 +261,7 @@ cmd_addgame(cmd, sub)
 void
 event_hook(void)
 {
-	FD_SET_NEEDS_STRUCT fd_set	checkfds;
+	fd_set	checkfds;
 	int				ret_val;
 
 	/* Check if something came in from the game_socket. */

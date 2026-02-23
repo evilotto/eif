@@ -21,7 +21,7 @@
 #ifdef	HAVE_STRINGS_H
 #include	<strings.h>
 #endif				/* HAVE_STRINGS_H */
-#include	<sys/time.h>
+#include	<time.h>
 #include	<sys/types.h>
 #include	<sys/uio.h>
 #ifdef	HAVE_UNISTD_H
@@ -247,7 +247,7 @@ static int
 dreadable(s, waitt)
 	int		s, waitt;
 {
-	FD_SET_NEEDS_STRUCT fd_set read_fd;
+	fd_set read_fd;
 	struct timeval	timeout;
 	int		rval;
 
